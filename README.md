@@ -1,4 +1,5 @@
 # LetsCharge-Application
+•Quartz Scheduler
 •Started a new project from scratch using Spring Boot, and Maven by understanding business requirement documents.
 •Integrated external APIs to get output, and customized this output to respond as required business logic.
 •Created separate microservices for all journey modules.
