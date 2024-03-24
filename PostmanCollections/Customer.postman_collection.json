@@ -1,0 +1,174 @@
+{
+	"info": {
+		"_postman_id": "0e20fc14-11bd-422f-a37a-37269240f217",
+		"name": "Customer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24558156",
+		"_collection_link": "https://lively-meteor-530828.postman.co/workspace/LetsCharge~fd5027ab-a191-46b8-943b-e464d095ee3a/collection/24558156-0e20fc14-11bd-422f-a37a-37269240f217?action=share&source=collection_link&creator=24558156"
+	},
+	"item": [
+		{
+			"name": "updateById",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "3b45d2c9-55c8-41d3-a299-d1b3b591c1c7",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"first_name\":\"ajay\",\n    \"last_name\":\"kate\",\n    \"email\":\"ajaykate123@gmail.com\",\n    \"status\":\"inactive\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/api/updateCustomerById?id=6c3d130b-0ff6-44df-9bc8-e577350e12eb",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"updateCustomerById"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "6c3d130b-0ff6-44df-9bc8-e577350e12eb"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findById",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9090/api/fetchCustomerById?id=8b6b4ee7-c30a-4e77-82a0-4b9a7891441f",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"fetchCustomerById"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "8b6b4ee7-c30a-4e77-82a0-4b9a7891441f"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"first_name\": \"ajay\",\n    \"last_name\": \"kate\",\n    \"email\": \"ak@gmail.com\",\n    \"status\": \"active\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/api/insertCustomer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"insertCustomer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create Copy",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"first_name\": \"ajay\",\n    \"last_name\": \"kate\",\n    \"email\": \"ak@gmail.com\",\n    \"status\": \"active\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/api/insertCustomerPostCopy",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"insertCustomerPostCopy"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List All Customers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9090/api/fetchAllCustomers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"fetchAllCustomers"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

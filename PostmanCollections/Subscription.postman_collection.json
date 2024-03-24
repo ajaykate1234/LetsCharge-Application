@@ -1,0 +1,160 @@
+{
+	"info": {
+		"_postman_id": "dad742ed-2d42-4c92-a1a7-2ca057a7e049",
+		"name": "Subscription",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24558156",
+		"_collection_link": "https://lively-meteor-530828.postman.co/workspace/LetsCharge~fd5027ab-a191-46b8-943b-e464d095ee3a/collection/24558156-dad742ed-2d42-4c92-a1a7-2ca057a7e049?action=share&source=collection_link&creator=24558156"
+	},
+	"item": [
+		{
+			"name": "create",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "ajay@123",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "ajay",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"quantity\": 1,\n    \"status\": \"running\",\n    \"customer\": {\n        \"customer_id\": \"a5f88ee9-ab86-4878-bf34-335cddbb7f52\"\n    },\n    \"Plan\": {\n        \"plan_id\": \"063bff38-1aca-43f5-adeb-c2f23acb88ba\"\n    },\n    \"Product\": {\n        \"product_id\": \"aad19441-6fe5-4cfd-8801-119c6b316ce9\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/api/createSubscription",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"createSubscription"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listAll",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"quantity\": 2,\n    \"object\": \"subscription\",\n    \"status\": \"active\",\n    \"customer\": {\n        \"customer_id\": \"2be2215b-b8b5-4d0e-949d-b0792e690cf1\"\n    },\n    \"Plan\": {\n        \"plan_id\": \"9407fdaa-ba9b-4265-9325-f4a4981144da\"\n    },\n    \"Product\": {\n        \"product_id\": \"ef761a6c-b3df-4664-bc7c-d98f580822b1\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/api/fetchAllSubscription",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"fetchAllSubscription"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"status\": \"cancel\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/api/updateSubscription?id=2c8c895a-7ada-4165-9db4-2359def2c035",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"updateSubscription"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "2c8c895a-7ada-4165-9db4-2359def2c035"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update Copy",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"status\": \"running\"\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/api/updateSubscription?id=98fb120f-4afa-4e79-b404-1d6b4b79b696",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"updateSubscription"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "98fb120f-4afa-4e79-b404-1d6b4b79b696"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

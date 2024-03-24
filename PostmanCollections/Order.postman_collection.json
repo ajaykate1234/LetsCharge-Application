@@ -1,0 +1,66 @@
+{
+	"info": {
+		"_postman_id": "559ccf19-99c0-4213-ade8-9ad973aa0370",
+		"name": "Order",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24558156",
+		"_collection_link": "https://lively-meteor-530828.postman.co/workspace/LetsCharge~fd5027ab-a191-46b8-943b-e464d095ee3a/collection/24558156-559ccf19-99c0-4213-ade8-9ad973aa0370?action=share&source=collection_link&creator=24558156"
+	},
+	"item": [
+		{
+			"name": "add order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"subscription_id\":\"22fc1ef2-a286-46bf-a6b8-f7d90f8e49ad\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/api/addOrder",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"addOrder"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9090/api/fetchOrderById?id=5d803987-cb2a-47be-bf0a-31e84e707fed",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"fetchOrderById"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "5d803987-cb2a-47be-bf0a-31e84e707fed"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

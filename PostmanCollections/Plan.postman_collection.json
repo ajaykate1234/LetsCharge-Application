@@ -1,0 +1,104 @@
+{
+	"info": {
+		"_postman_id": "5009fb39-929c-4f84-8404-96e7f4af3130",
+		"name": "Plan",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24558156",
+		"_collection_link": "https://lively-meteor-530828.postman.co/workspace/LetsCharge~fd5027ab-a191-46b8-943b-e464d095ee3a/collection/24558156-5009fb39-929c-4f84-8404-96e7f4af3130?action=share&source=collection_link&creator=24558156"
+	},
+	"item": [
+		{
+			"name": "create",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"plan_name\":\"AnnualPlan\",\n    \"planType\":\"annually\",\n    \"plan_frequency\":1,\n    \"status\":\"active\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/api/insertPlan",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"insertPlan"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ListAll",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "19e2b2b5-ae3d-4aa3-a775-899142372efd",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9090/api/fetchAllPlan",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"fetchAllPlan"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetBy Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9090/api/fetchPlanById?id=a74a8c7a-b423-42bb-bd96-c59fc2b79154",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"fetchPlanById"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "a74a8c7a-b423-42bb-bd96-c59fc2b79154"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
